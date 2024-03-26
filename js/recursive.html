@@ -1,0 +1,25 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            function facto(n){
+                if(n==1){
+                    return 1
+                }
+                else{
+                    return n*facto(n-1);
+                }
+            }
+            var res = facto(9)
+            console.log(res)
+        </script>
+    </body>
+</html>
+<!-- 
+    6*facto(5)
+    6*5*facto(4)
+    6*5*4*facto(3)
+    6*5*4*3*facto(2)
+    6*5*4*3*2*facto(1)
+    6*5*4*3*2*1
+ -->

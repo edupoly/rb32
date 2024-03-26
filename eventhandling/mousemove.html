@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <style>
+            #d1{
+                border:2px solid gray;
+                width:400px;
+                height:300px;
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <button id="rbt">Reset</button>
+        <script>
+            var flag='upped';
+            function abc(e){
+                console.log(e)
+                if(flag==='downed')
+                {
+                    var ndiv = document.createElement("div");
+                    ndiv.style.width='2px';
+                    ndiv.style.height='2px';
+                    ndiv.style.backgroundColor='blue';
+                    ndiv.style.position='absolute';
+                    ndiv.style.top=e.clientY;
+                    ndiv.style.left=e.clientX;
+                    document.getElementById('d1').appendChild(ndiv)
+                }
+                
+            }
+            document.getElementById("d1").onmousemove = abc;
+            document.getElementById("rbt").onclick=function(){
+                document.getElementById("d1").innerHTML="";
+            }
+            document.getElementById("d1").onmousedown=function(){
+                console.log('downed')
+                flag='downed';
+            }
+            document.getElementById("d1").onmouseup=function(){
+                console.log('uppped')
+                flag='upped';
+            }
+        </script>
+    </body>
+</html>

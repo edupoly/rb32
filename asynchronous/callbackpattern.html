@@ -1,0 +1,60 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            // function add(a,b){
+            //     return a+b;
+            // }
+            // var res = add(10,20);
+            // console.log(res)
+
+            function add(a,b,cb){
+                var z = a+b;
+                cb(z)
+            }
+            add(10,20,function(res){console.log(res)})
+
+            function sub(a,b,cb){
+                var z = a-b;
+                cb(z)
+            }
+
+            sub(300,34,function(x){console.log(x)})
+
+            function div(a,b,cb){
+                if(b===0){
+                    cb("Denominator cannot be ZERO",null)
+                }
+                else{
+                    cb(null,a/b)
+                }
+            }
+            div(10,0,function(err,res){
+                if(err){console.warn("Error::",err)}
+                else{console.log("Result::",res)}
+            })
+
+            function mydiv(a,b){
+                if(b===0){
+                    return Promise.reject("Denominator cannot be zero")
+                }
+                else{
+                    return Promise.resolve(a/b)
+                }
+            }
+            mydiv(10,0)
+            .then(function(res){console.log(res)})
+            .catch(function(err){console.error(err)})
+
+
+            setTimeout(function(){console.log("HI")},3000)
+
+            var i=1;
+            var timer = setInterval(function(){
+                console.log(i++);
+                if(i==11){clearInterval(timer)}
+            },1000)
+
+        </script>
+    </body>
+</html>

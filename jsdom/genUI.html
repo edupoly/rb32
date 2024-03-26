@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to Edupoly</h1>
+        <table border="2">
+            <thead>
+                <th>Country</th>
+                <th>Highlights</th>
+            </thead>
+            <tbody id="d1">
+
+            </tbody>
+        </table>
+        <script>
+            
+            var ar = [
+                {
+                    counrty:'INDIA',
+                    highlights:'Very Hospital country with diverse nature. These People love cricket'
+                },
+                {
+                    counrty:'Englad',
+                    highlights:'Royal by feel, XXXXX by nature. One of the greatest empires of world'
+                },
+                {
+                    counrty:'Singapore',
+                    highlights:'Small country with greatest progress.'
+                },
+                {
+                    counrty:'Maldives',
+                    highlights:'................'
+                },
+            ];
+
+            ar.forEach(function(ob){
+                var ntr = document.createElement("tr");
+                
+                var ctd = document.createElement("td");
+                ctd.innerHTML=ob.counrty;
+                ntr.appendChild(ctd);
+
+                var htd = document.createElement("td");
+                htd.innerHTML = ob.highlights;
+                ntr.appendChild(htd);
+
+                document.getElementById("d1").appendChild(ntr)
+            })
+        </script>
+    </body>
+</html>

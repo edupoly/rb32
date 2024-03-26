@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        
+        <button class="btn" id="d1">lets see events with inline binding</button>
+        <br>
+        <button class="btn" id="d2">This button with addEventListener</button>
+        <br>
+        <button class="btn" id="d3">This button with element object eventlistener property</button>
+        <script>
+
+            function abc(e){
+                e.target.style.backgroundColor='red'
+            }
+            
+            document.getElementById("d1").onclick=abc;
+            document.getElementById("d2").onclick=abc;
+            document.getElementById("d3").onclick=abc;
+
+
+
+            
+        </script>
+    </body>
+</html>
+<!-- 
+    event handling
+        eventlistener
+            +
+        event handler
+            =
+        event binding
+ -->
+<!-- 
+    window events
+    mouse events
+    keyboard events
+    focus events
+    form events
+    input element events
+        change
+        checked
+        selected
+ -->

@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+
+            function add(...c){
+                return c.reduce((a,b)=>a+b,0)
+            }
+
+            console.log(add(10,20,30))
+            console.log(add(10,20))
+            console.log(add(10,20,30,40,50,20,40,47,46))
+            console.log(add(10,20,30,40,50))
+
+            // var inc = x=>++x;
+            
+            // var add = (a,b)=>a+b;
+            
+            // var res = add(10,20);
+            // console.log(res)
+        </script>
+    </body>
+</html>

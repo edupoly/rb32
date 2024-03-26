@@ -1,0 +1,25 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var n = 8;
+            var r = 6;
+          
+            function facto(k){
+                var f = 1;
+                for(var i=k;i>=1;i--){
+                    f=f*i;
+                }
+                return f
+            }
+
+            var res = facto(n)/(facto(r)*facto(n-r))
+
+            console.log(res)
+            
+        </script>
+    </body>
+</html>
+<!-- 
+    nCr= (n!)/((r!)(n-r)!)
+-->

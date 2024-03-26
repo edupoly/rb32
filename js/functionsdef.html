@@ -1,0 +1,30 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var n = 8;
+            var r = 6;
+            var a = 5;
+            var p = 9;
+
+            function isPrime(n){
+                var c = 0;
+                for(var i=1;i<=n;i++){
+                    if(n%i===0){
+                        console.log(i)
+                        c++
+                    }
+                }
+                if(c===2){
+                    console.log("Its prime")
+                }
+                else{
+                    console.log("Not a Prime")
+                }
+            }
+
+           isPrime(3257)
+           isPrime(17)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        <form onsubmit="save(event)">
+            <input type="text" placeholder="Enter your name">
+            <br>
+            <input type="text" placeholder="Enter your age">
+            <br>
+            <button>Save</button>
+        </form>
+        <script>
+            function save(e){
+                e.preventDefault();
+                var formdata = new FormData(e.target);
+                console.log(formdata.entries())
+            }
+            var ob1 = {
+                firstname:"Praveen",
+                lastname:"Gubbala",
+                age:40
+            }
+
+            var fields = Object.keys(ob1);
+            for(let key of fields){
+                console.log(ob1[key])
+            }
+        </script>
+    </body>
+</html>

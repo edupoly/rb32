@@ -1,0 +1,60 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+
+            var ar = [124,59,149,36,19,50,82];
+
+            var f = ar.reduce(function(a,b){
+                console.log("HI",a,b)
+                if(a>b){
+                    return a;
+                }
+                else{
+                    return b
+                }
+            },0)
+
+            console.log(f)
+
+            // var br = ar.map(function(a,i){
+            //     console.log('hello',a,i)
+            //     return ar[i]*2
+            // })
+
+            // console.log(br)
+
+            // var br = ar.filter(function(x,i){
+
+            //     if(x%2==0){
+            //         return true
+            //     }
+                
+            // })
+
+            // console.log(br)
+
+            // var ar = [123,59,49,36,16,50];
+
+
+            // ar.forEach(function(x,j){console.log("Edupoly",x,j)})
+            
+            // function abc(a,b){
+            //     console.log(a)
+            //     console.log(b)
+            // }//firstclass function
+
+            // abc(function(){console.log('HIHI')},100)
+        </script>
+    </body>
+</html>
+<!-- 
+    1. function def
+    2. function call
+    3. arguments
+    4. parameters
+
+    function types
+        anonymous functions
+        callback function
+ -->

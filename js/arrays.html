@@ -2,20 +2,18 @@
     <head></head>
     <body>
         <script>
-            var ar = [45,32,64,39,20,7,99,5,88,14,57,35,56,24,45,44];
-            var sum = 0;
+            var ar = [45,32,64,392,2000,7,99,5,88,14,57,315,56,24,45,44];
+            var min = ar[0];
+
+
             for(var i=1;i<=ar.length-1;i++){
-                sum=sum+ar[i];
+                if(min>ar[i])
+                {
+                    min=ar[i]
+                }
             }
-            console.log(sum)
 
-            var br = [10,20,15,25];
-            console.log(br[br.length])
-
-
-
-
-
+            console.log(min)
 
 
 

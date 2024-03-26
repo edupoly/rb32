@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style>
+            button{
+                margin:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script>
+            var ar = [10,28,14,38];
+
+            ar.forEach(function(a,i){
+                var nbtn = document.createElement("button");
+                nbtn.innerHTML=a;
+                nbtn.onclick=function(){alert(i)}
+                document.getElementById("d1").appendChild(nbtn)
+            })
+
+
+            // for(let i=0;i<=ar.length-1;i++){
+            //     var nbtn = document.createElement("button");
+            //     nbtn.innerHTML=ar[i];
+            //     nbtn.onclick=function(){alert(i)}
+            //     document.getElementById("d1").appendChild(nbtn)
+            // }
+
+        </script>
+    </body>
+</html>
+<!-- 
+    function(){console.log(i)
+    function(){console.log(i)
+    function(){console.log(i)
+    function(){console.log(i)
+ -->

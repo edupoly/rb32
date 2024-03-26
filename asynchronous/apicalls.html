@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <style></style>
+    </head>
+    <body>
+        <ul id="d1">
+
+        </ul>
+        <button onclick="abc()">Get Samanlu</button>
+        <button onclick="xyz()">Get Deshalu</button>
+        <script>
+            // function getAllCountries(){
+            //     var p = new Promise(function(resolve,reject){
+            //         fetch("https://restcountries.com/v3/all")
+            //         .then(function(res){
+            //             res.json().then(function(data){
+            //                 resolve(data);
+            //             })
+            //         })
+            //         .catch(function(err){
+            //             reject(err)
+            //         })
+            //     })
+            //     return p;
+            // }
+
+            async function getAllCountries(){
+                var res = await fetch("https://restcountries.com/v3/all")
+                var data = await res.json();
+                return data
+            }
+            function xyz(){
+                getAllCountries()
+                .then(function(data){
+                    data.forEach(function(c){
+                        var nli = document.createElement("li")
+                        nli.innerHTML=c.name.common;
+                        document.getElementById("d1").appendChild(nli)
+                    })
+                })
+                .catch()
+               
+            }
+
+
+
+
+
+
+
+
+
+            function abc(){
+                fetch("https://fakestoreapi.com/products")
+                .then(function(res){
+                    res.json().then(function(data){
+                        console.log(data)
+                    })
+                })
+                .catch(function(err){
+                    console.log(err)
+                })
+            }
+        </script>
+    </body>
+</html>
